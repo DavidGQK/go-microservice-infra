@@ -1,6 +1,7 @@
 package main
 
 import (
+	"log"
 	"log-service/data"
 	"net/http"
 )
@@ -29,6 +30,8 @@ func (app *Config) WriteLog(w http.ResponseWriter, r *http.Request) {
 		Error:   false,
 		Message: "logged",
 	}
+
+	log.Println(resp)
 
 	app.writeJson(w, http.StatusAccepted, resp)
 }
