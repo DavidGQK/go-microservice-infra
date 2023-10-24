@@ -59,5 +59,4 @@ func connect() (*amqp.Connection, error) {
 	}
 
 	return connection, nil
-
 }
