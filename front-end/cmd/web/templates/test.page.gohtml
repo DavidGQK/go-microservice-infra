@@ -63,7 +63,7 @@
             headers: headers,
         }
 
-        fetch("http://localhost:8090/log-grpc", body)
+        fetch("http://localhost/log-grpc", body)
             .then((response) => response.json())
             .then((data) => {
                 sent.innerHTML = JSON.stringify(payload, undefined, 4);
@@ -100,7 +100,7 @@
             headers: headers,
         }
 
-        fetch("http://localhost:8090/handle", body)
+        fetch("http://localhost/handle", body)
             .then((response) => response.json())
             .then((data) => {
                 sent.innerHTML = JSON.stringify(payload, undefined, 4);
@@ -134,7 +134,7 @@
             headers: headers,
         }
 
-        fetch("http://localhost:8090/handle", body)
+        fetch("http://localhost/handle", body)
             .then((response) => response.json())
             .then((data) => {
                 sent.innerHTML = JSON.stringify(payload, undefined, 4);
@@ -171,7 +171,7 @@
 
         }
 
-        fetch("http://localhost:8090/handle", body)
+        fetch("http://localhost/handle", body)
         .then((response) => response.json())
         .then((data) => {
             sent.innerHTML = JSON.stringify(payload, undefined, 4);
@@ -193,7 +193,7 @@
             method: 'POST',
         }
 
-        fetch("http://localhost:8090", body)
+        fetch("http://localhost", body)
         .then((response) => response.json())
         .then((data) => {
             sent.innerHTML = "empty post request";
