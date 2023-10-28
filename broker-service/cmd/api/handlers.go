@@ -44,7 +44,7 @@ func (app *Config) Broker(w http.ResponseWriter, r *http.Request) {
 		Error:   false,
 		Message: "Hit the broker",
 	}
-
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 	_ = app.writeJson(w, http.StatusOK, payload)
 }
 
